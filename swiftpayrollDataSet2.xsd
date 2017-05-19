@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="swiftpayrollDataSet" targetNamespace="http://tempuri.org/swiftpayrollDataSet2.xsd" xmlns:mstns="http://tempuri.org/swiftpayrollDataSet2.xsd" xmlns="http://tempuri.org/swiftpayrollDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="swiftpayrollConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="swiftpayrollConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SwiftPayRoll.Properties.Settings.GlobalReference.Default.swiftpayrollConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="jobdataTableAdapter" GeneratorDataComponentClassName="jobdataTableAdapter" Name="jobdata" UserDataComponentName="jobdataTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="swiftpayrollConnectionString (Settings)" DbObjectName="swiftpayroll.jobdata" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `JobID`, `JobName`, `BasicPay`, `OTPay` FROM `jobdata`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="payrollhistTableAdapter" GeneratorDataComponentClassName="payrollhistTableAdapter" Name="payrollhist" UserDataComponentName="payrollhistTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="swiftpayrollConnectionString (Settings)" DbObjectName="swiftpayroll.payrollhist" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `EmployeeID`, `salary`, `hoursworked` FROM `payrollhist`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="personaldataTableAdapter" GeneratorDataComponentClassName="personaldataTableAdapter" Name="personaldata" UserDataComponentName="personaldataTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="swiftpayrollConnectionString (Settings)" DbObjectName="swiftpayroll.personaldata" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `EmployeeID`, `LastName`, `FirstName`, `Gender`, `DOB`, `EmailID`, `Address1`, `Address2`, `State`, `Zip`, `City`, `jobid` FROM `personaldata`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="swiftpayrollDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="swiftpayrollDataSet" msprop:Generator_UserDSName="swiftpayrollDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="jobdata" msprop:Generator_TableClassName="jobdataDataTable" msprop:Generator_TableVarName="tablejobdata" msprop:Generator_TablePropName="jobdata" msprop:Generator_RowDeletingName="jobdataRowDeleting" msprop:Generator_RowChangingName="jobdataRowChanging" msprop:Generator_RowEvHandlerName="jobdataRowChangeEventHandler" msprop:Generator_RowDeletedName="jobdataRowDeleted" msprop:Generator_UserTableName="jobdata" msprop:Generator_RowChangedName="jobdataRowChanged" msprop:Generator_RowEvArgName="jobdataRowChangeEvent" msprop:Generator_RowClassName="jobdataRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="payrollhist" msprop:Generator_TableClassName="payrollhistDataTable" msprop:Generator_TableVarName="tablepayrollhist" msprop:Generator_TablePropName="payrollhist" msprop:Generator_RowDeletingName="payrollhistRowDeleting" msprop:Generator_RowChangingName="payrollhistRowChanging" msprop:Generator_RowEvHandlerName="payrollhistRowChangeEventHandler" msprop:Generator_RowDeletedName="payrollhistRowDeleted" msprop:Generator_UserTableName="payrollhist" msprop:Generator_RowChangedName="payrollhistRowChanged" msprop:Generator_RowEvArgName="payrollhistRowChangeEvent" msprop:Generator_RowClassName="payrollhistRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="personaldata" msprop:Generator_TableClassName="personaldataDataTable" msprop:Generator_TableVarName="tablepersonaldata" msprop:Generator_TablePropName="personaldata" msprop:Generator_RowDeletingName="personaldataRowDeleting" msprop:Generator_RowChangingName="personaldataRowChanging" msprop:Generator_RowEvHandlerName="personaldataRowChangeEventHandler" msprop:Generator_RowDeletedName="personaldataRowDeleted" msprop:Generator_UserTableName="personaldata" msprop:Generator_RowChangedName="personaldataRowChanged" msprop:Generator_RowEvArgName="personaldataRowChangeEvent" msprop:Generator_RowClassName="personaldataRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
